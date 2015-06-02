@@ -1,8 +1,8 @@
-matrix
+Matrix
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Validates if a value is a Matrix.
+> Validates if a value is a [Matrix](https://github.com/compute-io/matrix).
 
 
 ## Installation
@@ -17,18 +17,51 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-matrix' );
+var isMatrix = require( 'validate.io-matrix' );
 ```
 
-#### foo( value )
+#### isMatrix( value )
 
-What does this function do?
+Validates if a value is a [Matrix](https://github.com/compute-io/matrix).
+
+``` javascript
+var matrix = require( 'compute-matrix' );
+
+var mat = matrix( [10,10] );
+
+var bool = isMatrix( mat );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-matrix' );
+var matrix = require( 'compute-matrix' ),
+	isMatrix = require( 'validate.io-matrix' );
+
+var mat = matrix( [10,10] );
+
+console.log( isMatrix( mat ) );
+// returns true
+
+console.log( isMatrix( [] ) );
+// returns false
+
+console.log( isMatrix( {} ) );
+// returns false
+
+console.log( isMatrix({
+	'data': new Int8Array( 10 ),
+	'shape': [5,2],
+	'strides': [2,1],
+	'dtype': 'int8',
+	'length': 10
+}));
+// returns false
+
+console.log( isMatrix( null ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
