@@ -2,7 +2,7 @@
 
 // MODULES //
 
-var matrix = require( 'compute-matrix' ),
+var matrix = require( 'dstructs-matrix' ),
 	isMatrixLike = require( 'validate.io-matrix-like' ),
 	isMatrix = require( './../lib' );
 
@@ -58,6 +58,6 @@ res[ 1 ] = stop[ 0 ] + stop[ 1 ]*1e-9;
 // RESULTS
 
 console.log( 'matrix-like:\t%d ops/sec', Math.floor( len/res[ 0 ] ) );
-console.log( 'matrix:\t%d ops/sec', Math.floor( len/res[ 1 ] ) );
+console.log( 'matrix:\t\t%d ops/sec', Math.floor( len/res[ 1 ] ) );
 console.log( '\n' );
 

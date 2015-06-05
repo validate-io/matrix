@@ -7,7 +7,7 @@ var // Expectation library:
 	chai = require( 'chai' ),
 
 	// Module to create matrices:
-	matrix = require( 'compute-ndarray' ),
+	matrix = require( 'dstructs-matrix' ),
 
 	// Module to be tested:
 	isMatrix = require( './../lib' );
@@ -41,11 +41,18 @@ describe( 'validate.io-matrix', function tests() {
 			true,
 			[],
 			{},
-			function ndarray(){}
+			{
+				'data': new Int8Array( 10 ),
+				'shape': [5,2],
+				'strides': [2,1],
+				'dtype': 'int8',
+				'length': 10
+			},
+			function matrix(){}
 		];
 
 		for ( var i = 0; i < values.length; i++ ) {
-			assert.notOk( isMatrix( values[i] ), values[ i ] );
+			assert.isFalse( isMatrix( values[i] ), values[ i ] );
 		}
 	});
 

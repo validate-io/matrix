@@ -1,7 +1,7 @@
 {
   "name": "validate.io-matrix",
   "version": "0.0.0",
-  "description": "Validates if a value is a Matrix.",
+  "description": "Validates if a value is a matrix.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -46,6 +46,7 @@
   "devDependencies": {
     "chai": "2.x.x",
     "coveralls": "^2.11.1",
+    "dstructs-matrix": "^1.0.0",
     "istanbul": "^0.3.0",
     "jshint": "2.x.x",
     "jshint-stylish": "^1.0.0",

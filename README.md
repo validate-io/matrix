@@ -2,7 +2,7 @@ Matrix
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Validates if a value is a [Matrix](https://github.com/compute-io/matrix).
+> Validates if a value is a [matrix](https://github.com/dstructs/matrix).
 
 
 ## Installation
@@ -22,10 +22,10 @@ var isMatrix = require( 'validate.io-matrix' );
 
 #### isMatrix( value )
 
-Validates if a value is a [Matrix](https://github.com/compute-io/matrix).
+Validates if a value is a [matrix](https://github.com/dstructs/matrix).
 
 ``` javascript
-var matrix = require( 'compute-matrix' );
+var matrix = require( 'dstructs-matrix' );
 
 var mat = matrix( [10,10] );
 
@@ -37,7 +37,7 @@ var bool = isMatrix( mat );
 ## Examples
 
 ``` javascript
-var matrix = require( 'compute-matrix' ),
+var matrix = require( 'dstructs-matrix' ),
 	isMatrix = require( 'validate.io-matrix' );
 
 var mat = matrix( [10,10] );
